@@ -1,15 +1,18 @@
 //colapsar y mostrar el navBar, mover el contenedor
 const navbar = document.querySelector('.navbar');
-const homefund = document.querySelector('.container');
+const containers = document.querySelectorAll('.container');
 
 navbar.addEventListener('mouseenter', function() {
   navbar.classList.remove('collapsed');
-    homefund.setAttribute("style", "left:20rem"); 
+  containers.forEach(container => {
+    container.setAttribute("style", "left:20rem");
+  });
 });
-
 navbar.addEventListener('mouseleave', function() {
   navbar.classList.add('collapsed');
-  homefund.setAttribute("style", "left:7rem");
+  containers.forEach(container => {
+    container.setAttribute("style", "left:7rem");
+  });
 });
 
 // clase active 
