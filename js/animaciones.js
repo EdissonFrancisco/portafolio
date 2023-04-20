@@ -1,9 +1,10 @@
+//colapsar y mostrar el navBar, mover el contenedor
 const navbar = document.querySelector('.navbar');
-const homefund = document.querySelector('.contenedor');
+const homefund = document.querySelector('.container');
 
 navbar.addEventListener('mouseenter', function() {
   navbar.classList.remove('collapsed');
-  homefund.setAttribute("style", "left:20rem");
+    homefund.setAttribute("style", "left:20rem"); 
 });
 
 navbar.addEventListener('mouseleave', function() {
@@ -24,3 +25,18 @@ function activarLink(event) {
 
 item_actived.forEach((item) => item.addEventListener('click', activarLink));
 
+/*animacion de escritura titulo*/
+const textselected = document.querySelector('.principal_home_title');
+const titletext = textselected.textContent;
+textselected.textContent = "";
+
+var i = 0;
+function writeTitle() {
+  if (i < titletext.length) {
+    textselected.textContent += titletext.charAt(i);
+    i++;
+    setTimeout(writeTitle, 10);
+  }
+}
+
+setTimeout(writeTitle, 100);

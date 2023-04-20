@@ -19,7 +19,7 @@
 <body>
     <header class="navbar collapsed">
         <div class="navbar_logo">
-            <img src="imagenes/logoHome.png" alt="Logo personal de portafolio">
+            <img src="./imagenes/logoHome.png" alt="Logo personal de portafolio">
             <h1 class="no-margin">Edisson</h1>
         </div>
         <div class="navbar_navigation">
@@ -59,19 +59,21 @@
         </div>
     </header><!-- .navbar -->
 
-    <section class="contenedor principal_home">
-        <div class="home_title">
-            <h1>Edisson Francisco Acero</h1>            
-        </div>
+    <section class="container div_flex">
         <div class="home_text">
+            <div class="home_title">
+                <h1 class="principal_home_title">Edisson Francisco Acero</h1>            
+            </div>
             <h3>Desarrollador full Stack</h3>
             <p>
                 Bienvenidos a mi portafolio de desarrollo web.
-                En este portafolio, encontrarás ejemplos de mi trabajo en el desarrollo de sitios web.
-                Mi experiencia en el desarrollo de sitios web y aplicaciones incluye tecnologías como HTML, CSS,
-                JavaScript, PHP, MySQL y muchas otras.
-                Estoy seguro de que mi portafolio de desarrollo web te dará una buena idea de mi enfoque de trabajo y de
-                las soluciones que puedo ofrecer.
+                Aqui encontrarás ejemplos de mi trabajo en el 
+                desarrollo de sitios web, y un poco de mi 
+                experiencia que incluye una gran variedad de
+                tecnologías.
+                Estoy seguro de que mi portafolio de desarrollo
+                web te dará una buena idea de mi enfoque de 
+                trabajo y de las soluciones que puedo ofrecer.
                 No dudes en descargar mi CV
             </p>
             <a href="#" class="button button_download"> Descargar Cv
@@ -79,11 +81,32 @@
             </a>
         </div>
         <div class="home_img">
-            <img src="imagenes/ingFondoHome.png" alt="" srcset="">
+            <img src="./imagenes/opFondoHome6.png" alt="" srcset="">
         </div>
-
+    </section><!-- .principal_home -->
+    <section class="container div_flex">
+        <div>
+            <div>
+                <h2>Mis habilidades</h2>
+                <p>
+                    Hay muchas variaciones de los pasajes de Lorem 
+                    Ipsum disponibles, pero la mayoría sufrió 
+                    alteraciones en alguna manera, ya sea porque 
+                    se le agregó humor, o palabras aleatorias que 
+                    no parecen ni un poco creíbles. Si vas a 
+                    utilizar un pasaje de Lorem Ipsum, necesitás 
+                    estar seguro de que no hay nada avergonzante 
+                    escondido en el medio del texto.
+                </p>
+                <div class="profile_icon"></div>
+            </div>
+        </div>
+        <div>
+            <div class="profile_photo_fund"></div>
+            <img class="profile_photo" src="./imagenes/fotoPersonal.png" alt="">
+        </div>
     </section>
 
-    <script src="js/navbar.js"></script>
+    <script src="js/animaciones.js"></script>
 </body>
 </html>
