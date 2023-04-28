@@ -5,7 +5,7 @@ const containers = document.querySelectorAll('.container');
 navbar.addEventListener('mouseenter', function() {
   navbar.classList.remove('collapsed');
   containers.forEach(container => {
-    container.setAttribute("style", "left:20rem");
+    container.setAttribute("style", "left:15rem");
   });
 });
 navbar.addEventListener('mouseleave', function() {

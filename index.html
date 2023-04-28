@@ -21,6 +21,48 @@
 </head>
 
 <body>
+    <!-- 
+        <nav class="navbar">
+        <ul class="navbar-nav">
+            <li class="logo">
+                <a href="#" class="nav-link">
+                    <img src="image/logoHome.svg" alt="logo personal inicio">
+                    <span>Edisson</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fa-solid fa-house-chimney-crack fa-2xl"></i>
+                    <span class="link-text">Inicio</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fa-solid fa-user-tie fa-2xl"></i>
+                    <span class="link-text">Perfil</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fa-solid fa-briefcase fa-2xl"></i>
+                    <span class="link-text">Proyectos</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fa-sharp fa-solid fa-brain fa-2xl"></i>
+                    <span class="link-text">Estudios</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fa-solid fa-message fa-2xl"></i>
+                    <span class="link-text">Contactame</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+     -->
     <header class="navbar collapsed">
         <div class="navbar_logo">
             <img src="./imagenes/logoHome.png" alt="Logo personal de portafolio">
@@ -39,7 +81,7 @@
                     <a href="#">
                         <span class="navbar_icon"> <i class="fa-solid fa-user-tie fa-2xl"></i> </span>
                         <span class="navbar_title">Perfil</span>
-                    </a>
+                    </a> 
                 </li>
                 <li class="navbar_list">
                     <a href="#">
@@ -85,15 +127,16 @@
             </a>
         </div>
         <div class="section_img">
-            <img src="./imagenes/opFondoHome6.png" alt="" srcset="">
+            <img src="./imagenes/opFondoHome6.png" alt="imagen de presentacion del portafolio">
         </div>
     </home><!-- .principal_home -->
 
     <section class="container div_flex">
         <div class="section_text">
-            <h2>Conoceme un poco mas</h2>
-            <div class="description">
-                
+            <div class="home_title">
+                <h2>Conoceme un poco mas</h2>
+            </div>            
+            <div class="description">                
                 <p>
                     Soy un apasionado por el desarrollo de aplicaciones y el uso de tecnologías de vanguardia.
                     Poseo habilidades sólidas en el modelado de datos y el análisis de sistemas gracias a mi
@@ -120,14 +163,49 @@
             </div>            
         </div>
         
-        <div class="section_img profile_photo">
-            <div class="profile_photo_fund">
+        <div class="section_img">
+            <div class="profile_photo_fund ">
                 <img src="./imagenes/fotoPersonal.png" alt="">
             </div>
         </div>
     </section>
 
-    <section class="container">
+    <section class="container container_card">
+        <div class="card">
+            <div class="card__publication">
+                <img src="./imagenes/opFondoHome2.svg" alt="imagen de pyoyecto">
+            </div>
+            <div class="card__info">
+                <h2 class="card__title">Artificial intelligence</h2>
+                <span class="card__subtitle">is this the end of the human race?</span>
+                <p class="card__description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam
+                    aliquid asperiores corporis earum et, laborum maxime molestias non
+                    odit omnis, praesentium. Et hic molestiae odio repellat, rerum sint
+                    vitae?
+                </p>
+                <a href="#" class="card__cta"> Read more <span>&rarr;</span> </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card__publication">
+                <img src="./imagenes/opFondoHome2.svg" alt="imagen de pyoyecto">
+            </div>
+            <div class="card__info">
+                <h2 class="card__title">Artificial intelligence</h2>
+                <span class="card__subtitle">is this the end of the human race?</span>
+                <p class="card__description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam
+                    aliquid asperiores corporis earum et, laborum maxime molestias non
+                    odit omnis, praesentium. Et hic molestiae odio repellat, rerum sint
+                    vitae?
+                </p>
+                <a href="#" class="card__cta"> Read more <span>&rarr;</span> </a>
+            </div>
+        </div>
+    </section>
+<!--         
         <div class="proyects">
             <div class="card_proyects">
                 <img src="./imagenes/opFondoHome2.svg" alt="imagen de pyoyecto">
@@ -165,7 +243,7 @@
                     No dudes en descargar mi CV
                 </p>
             </div>
-        </div>
+        </div> -->
     </section>
 
     <script src="js/animaciones.js"></script>
