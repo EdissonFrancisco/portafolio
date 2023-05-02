@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Normalize -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Tippografia -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- iconos -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Portafolio</title>
+</head>
+
+<body>
+    <header class="navbar">
+        <nav class="navbar-nav">
+            <a href="#" class="logo no-margin">
+                <img src="./image/logoHome.svg" alt="logo personal">
+                <h1>Edisson</h1>
+            </a>
+            <div class="navbar-list">
+                <ul class="nav-ul">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fa-solid fa-house-chimney-crack fa-2xl"></i>
+                            <span class="link-text">Inicio</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fa-solid fa-user-tie fa-2xl"></i>
+                            <span class="link-text">Perfil</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fa-solid fa-briefcase fa-2xl"></i>
+                            <span class="link-text">Proyectos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fa-sharp fa-solid fa-brain fa-2xl"></i>
+                            <span class="link-text">Estudios</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fa-solid fa-message fa-2xl"></i>
+                            <span class="link-text">Contactame</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-bars"><i class="fa-solid fa-bars fa-2xl"></i></div>
+        </nav>
+    </header>
+
+    <script>
+      const navbarlist = document.querySelector('.navbar-list');
+      const navbarcell = document.querySelector(".nav-bars");
+      const hamburguer = navbarcell.querySelector("i");
+
+      navbarcell.addEventListener("click", function() {
+        hamburguer.classList.toggle("fa-bars");
+        hamburguer.classList.toggle("fa-xmark");
+        navbarlist.classList.toggle('mobile-menu');
+      });
+    </script>
+</body>
+
+</html>
