@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <header class="navbar">
+    <header class="navbar collapsed">
         <nav class="navbar-nav">
             <a href="#" class="logo no-margin">
                 <img src="./image/logoHome.svg" alt="logo personal">
@@ -67,16 +67,136 @@
         </nav>
     </header>
 
-    <script>
-      const navbarlist = document.querySelector('.navbar-list');
-      const navbarcell = document.querySelector(".nav-bars");
-      const hamburguer = navbarcell.querySelector("i");
+    <main class="container div_flex">
+        <div class="section_text">
+            <div class="home_title">
+                <h1 class="principal_home_title">Edisson Francisco Acero</h1>
+            </div>
+            <h3>Desarrollador full Stack</h3>
+            <p>
+                Bienvenidos a mi portafolio de desarrollo web.
+                Aqui encontrarás ejemplos de mi trabajo en el
+                desarrollo de sitios web, y un poco de mi
+                experiencia que incluye una gran variedad de
+                tecnologías.
+                Estoy seguro de que mi portafolio de desarrollo
+                web te dará una buena idea de mi enfoque de
+                trabajo y de las soluciones que puedo ofrecer.
+                No dudes en descargar mi CV
+            </p>
+            <a href="#" class="button button_download"> Descargar Cv
+                <span><i class="fa-regular fa-circle-down fa-2xl"></i></span>
+            </a>
+        </div>
+        <div class="section_img">
+            <img src="./imagenes/opFondoHome6.png" alt="imagen de presentacion del portafolio">
+        </div>
+    </main><!-- .principal_home -->
 
-      navbarcell.addEventListener("click", function() {
-        hamburguer.classList.toggle("fa-bars");
-        hamburguer.classList.toggle("fa-xmark");
-        navbarlist.classList.toggle('mobile-menu');
-      });
+    <section class="container div_flex">
+        <div class="section_text">
+            <div class="home_title">
+                <h2>Conoceme un poco mas</h2>
+            </div>            
+            <div class="description">                
+                <p>
+                    Soy un apasionado por el desarrollo de aplicaciones y el uso de tecnologías de vanguardia.
+                    Poseo habilidades sólidas en el modelado de datos y el análisis de sistemas gracias a mi
+                    conocimiento en diferentes lenguajes de programación. Además, tengo habilidades
+                    interpersonales bien desarrolladas, trabajo en equipo, alta capacidad analítica
+                    y de aprendizaje continuo.
+                    aparte de lo academico y laboral disfruto dibujar y mantenerme en forma, lo que me ayuda
+                    a mantener una mente y un cuerpo saludables.
+                    Me emociona la posibilidad de aplicar mis habilidades y conocimientos para enfrentar nuevos desafíos
+                    en el campo de la tecnología, mientras también sigo desarrollando mis habilidades creativas y físicas en
+                    mi tiempo libre.
+                </p>
+            </div>
+            <div class="description_icons">
+                <h2>HABILIDADES</h2>
+                <div>
+                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-css3"></i>
+                    <i class="fa-brands fa-square-js"></i>
+                    <i class="fa-brands fa-java"></i>
+                    <i class="fa-brands fa-php"></i>
+                    <i class="fa-solid fa-database"></i>
+                </div>
+            </div>            
+        </div>
+        
+        <div class="section_img">
+            <div class="profile_photo_fund ">
+                <img src="./imagenes/fotoPersonal.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="container container_card">
+        <div class="card">
+            <div class="card__publication">
+                <img src="./imagenes/opFondoHome2.svg" alt="imagen de pyoyecto">
+            </div>
+            <div class="card__info">
+                <h2 class="card__title">Artificial intelligence</h2>
+                <span class="card__subtitle">is this the end of the human race?</span>
+                <p class="card__description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam
+                    aliquid asperiores corporis earum et, laborum maxime molestias non
+                    odit omnis, praesentium. Et hic molestiae odio repellat, rerum sint
+                    vitae?
+                </p>
+                <a href="#" class="card__cta"> Read more <span>&rarr;</span> </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card__publication">
+                <img src="./imagenes/opFondoHome2.svg" alt="imagen de pyoyecto">
+            </div>
+            <div class="card__info">
+                <h2 class="card__title">Artificial intelligence</h2>
+                <span class="card__subtitle">is this the end of the human race?</span>
+                <p class="card__description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam
+                    aliquid asperiores corporis earum et, laborum maxime molestias non
+                    odit omnis, praesentium. Et hic molestiae odio repellat, rerum sint
+                    vitae?
+                </p>
+                <a href="#" class="card__cta"> Read more <span>&rarr;</span> </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="javaScript/js.js">
+        //menu hamburguesa para dispositivos moviles
+        const navbarlist = document.querySelector('.navbar-list');
+        const navbarcell = document.querySelector(".nav-bars");
+        const hamburguer = navbarcell.querySelector("i");
+
+        navbarcell.addEventListener("click", function() {
+          hamburguer.classList.toggle("fa-bars");
+          hamburguer.classList.toggle("fa-xmark");
+          navbarlist.classList.toggle('mobile-menu');
+        });
+
+        //contraer y mostrar el menu para monitores
+        //colapsar y mostrar el navBar, mover el contenedor
+        const navbar = document.querySelector('.navbar');
+        const containers = document.querySelectorAll('.container');
+
+        navbar.addEventListener('mouseenter', function() {
+          navbar.classList.remove('collapsed');
+          containers.forEach(container => {
+            container.setAttribute("style", "left:17rem");
+          });
+        });
+        navbar.addEventListener('mouseleave', function() {
+          navbar.classList.add('collapsed');
+          containers.forEach(container => {
+            container.setAttribute("style", "left:6.5rem");
+          });
+        });
     </script>
 </body>
 
