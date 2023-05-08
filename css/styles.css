@@ -3,6 +3,7 @@
     --fuenteParrafos: 'Open Sans', sans-serif;
     --colorbluefund: #0e7ca6;
     --text-primary: #000000;
+    --colorLightblue: #87d2e4;
     --transition-speed: 600ms;
 }
 
@@ -64,6 +65,9 @@ h4 {
 img {
     max-width: 100%;
 }
+p {
+    text-align: justify;
+}
 
 /** UTILIDADES **/
 .no-margin {
@@ -110,9 +114,7 @@ img {
     width: 100%;
     padding-right: 3rem;
 }
-
 .logo {
-    height: 6rem;
     padding: 0 0 0 1rem;
     display: flex;
     justify-content: space-between;
@@ -129,6 +131,9 @@ img {
     margin: 0;
     padding: 0;
 }
+.active {
+    background-color: var(--colorLightblue);
+}
 
 @media only screen and (min-width: 769px) {
     .navbar {
@@ -138,16 +143,13 @@ img {
         width: 18rem;
         height: 100vh;
         padding: 0.6rem 0;
+        box-shadow: 0.2rem 0 0 var(--colorLightblue);
         overflow-x: hidden;
         transition: width 1s;        
     }
+    
     .navbar .navbar-nav {
         height: 100%;
-    },mn
-
-    .logo {
-        width: 8rem;
-        height: 6rem;
     }
 
     .navbar-list{
@@ -160,7 +162,7 @@ img {
     .navbar .navbar-list .nav-ul {
         list-style: none;
         font-size: 1.1rem;
-        width: 15rem;
+        width: 100%;
         padding-left: 1.5rem;
     }
     .nav-item{
@@ -190,7 +192,7 @@ img {
         left: 7rem;
         height: 100vh;
         position: relative;
-        width: calc(100% - 20rem);
+        width: calc(100% - 17rem);
         padding: 2rem;
         transition: 1.2s;
     }
@@ -202,7 +204,7 @@ img {
     }
     /* colapsar el navbar */
     .collapsed {
-        width: 6.5rem;
+        width: 6.54rem;
         /* ancho mínimo para mostrar solo el icono */
         transition: width 1s;
     }
@@ -213,7 +215,6 @@ img {
         width: 100vw;
         height: 6rem;
     }
-
     .navbar-nav {
         display: flex;
         justify-content: space-between;
@@ -254,4 +255,78 @@ img {
     .navbar-list .nav-ul .nav-item {
         padding: 2rem;
     }
+}
+
+/* contenido principal */
+.container{
+    padding-left: 4rem;
+    display: flex;
+    
+}
+.section_text{
+    width: 60%;
+    
+}
+.section_img{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    row-gap: 2rem;
+}
+
+/* Boton de descarga */
+.button {
+    position: relative;
+    color: var(--colorBlack);
+    text-decoration: none;
+    font-weight: bold;
+    font-family: var(--fontTitles);
+    letter-spacing: 0.1rem;
+    width: 20rem;
+    height: 5rem;
+    background: var(--colorLightblue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    padding-left: 3rem;
+    border: 0.5px solid var(--colorbluefund);
+    transition: 0.5s;
+    overflow: hidden;
+}
+.button::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 40%;
+    background-color: var(--colorgreyfund);
+    z-index: 1;
+    transform: translateX(-170px) skew(30deg);
+    transition: 0.75s ease-in-out;
+}
+.button:hover::after {
+    transform: translateX(170px) skew(30deg);
+}
+.button:hover {
+    padding-left: 0;
+    padding-right: 4rem;
+}
+.button_download span{
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--colorbluenavbar);
+    border-radius: 5rem;
+    left: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease-in-out ;
+}
+.button_download span i{
+    padding-left: 0.2rem;
+}
+.button_download:hover span {
+    left: calc(100% - 4.8rem);
 }
