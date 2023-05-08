@@ -23,6 +23,19 @@ navbar.addEventListener('mouseenter', function() {
 navbar.addEventListener('mouseleave', function() {
   navbar.classList.add('collapsed');
   containers.forEach(container => {
-    container.setAttribute("style", "left:6.5rem");
+    container.setAttribute("style", "left:6.6rem");
   });
 });
+
+// clase active 
+const item_actived = document.querySelectorAll('.nav-item');
+
+function activarLink(event) {
+  event.preventDefault();
+  item_actived.forEach((item) => {
+    item.classList.remove('active');
+  });
+  event.currentTarget.closest('li').classList.add('active');
+}
+
+item_actived.forEach((item) => item.addEventListener('click', activarLink));
