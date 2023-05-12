@@ -3,7 +3,7 @@
     --fuenteParrafos: 'Open Sans', sans-serif;
     --text-primary: #000000;
     --transition-speed: 600ms;
-    --colorbluefund: #0e7ca6;
+    --colorbluefund: #202022;
     --colorbluenavbar: #2965F1;
     --colorLightblue: #87d2e4;
     --colorgreennavbar: #20D368;
@@ -29,8 +29,10 @@ body {
     font-size: 1.6rem;
     line-height: 2;
     min-height: 100vh;
-    background: var(--colorbluefund);
-    background: linear-gradient(129deg, #0e7ca6 13%, #0e7ca6 16%, #258cb2 26%, #3b9cbd 34%, #59b1cc 43%, #8fd7e8 52%, #ffffff 55%, #b9d0d9 58%);
+    /* background: var(--colorbluefund); */
+    /* background: linear-gradient(130deg, rgba(32,32,34,1) 1%, rgba(39,75,105,1) 38%, rgba(133,161,193,1) 69%, rgba(198,204,216,1) 84%, rgba(198,204,216,1) 100%);  */
+    background: rgb(99,99,207);
+    background: linear-gradient(130deg, rgba(99,99,207,1) 12%, rgba(34,120,195,1) 42%, rgba(191,205,221,1) 75%, rgba(239,246,255,1) 100%); 000000000000000000000000000000
     background-attachment: fixed;
 }
 
@@ -106,7 +108,7 @@ p {
 
 /*no tocar de aca para abajo*/
 .navbar {
-    background: linear-gradient(#2965F1, #20D368);
+    background: linear-gradient(#274b69, #85a1c1);
 }
 
 .navbar-nav .logo {
@@ -349,11 +351,11 @@ p {
     width: 40%;
     background-color: var(--colorgreyfund);
     z-index: 1;
-    transform: translateX(-170px) skew(30deg);
+    transform: translateX(-30rem) skew(30deg);
     transition: 0.75s ease-in-out;
 }
 .button:hover::after {
-    transform: translateX(170px) skew(30deg);
+    transform: translateX(30rem) skew(30deg);
 }
 .button:hover {
     padding-left: 0;
